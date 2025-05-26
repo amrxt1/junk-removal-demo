@@ -1,16 +1,12 @@
+import Container from "./shared/Container";
 function Header() {
   return (
-    <div className="header">
-      <div className="header-logo">
-        Same Day Installations and Removal Service
+    <Container className="bg-foreground text-background py-2">
+      <div className="flex justify-between">
+        <div className="font-bold font-space">SDIARS</div>
+        <div className="font-bold font-mono">X</div>
       </div>
-      <div className="nav-bar">
-        <a href="#offer">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#map">Find Us</a>
-        <a>Contact Us</a>
-      </div>
-    </div>
+    </Container>
   );
 }
 

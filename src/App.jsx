@@ -14,11 +14,13 @@ function App() {
 
   return (
     <>
-      {count}
+      <div className="bg-red-950 text-background px-4 py-2">
+        Time since last refresh: {count} seconds
+      </div>
       <Header />
       <Hero />
       <Offers />
-      <Gallery />
+      {/* <Gallery /> */}
       <FindUs />
       <Footer />
     </>
