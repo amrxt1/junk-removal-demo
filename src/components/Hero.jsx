@@ -1,30 +1,24 @@
 import Container from "./shared/Container";
+import Button from "./shared/Button";
 
 function Hero() {
   return (
     <Container>
-      <div className="hero">
-        <div className="value">
-          <div className="value-text">
-            <h1 className="font-space">
-              Expert Assembly, Right Where You Need It
-            </h1>
-            <p>
-              <span>
-                Bought something, but don't know how to put it together? Call
-                us!
-              </span>
-              <br />
-              Our professionals will come to your place, assemble, and put it in
-              your desired place.
-            </p>
-            <a href="tel:6047658450" id="contact-btn">
-              Contact Us
-            </a>
-          </div>
+      <div className="flex flex-col py-32 text-center gap-8">
+        <div className="flex flex-col gap-4">
+          <h1 className="text-3xl font-space font-bold">
+            Expert Assembly, Right Where You Need It
+          </h1>
+          <h2 className=" text-xl">
+            Bought something, but don't know how to put it together? Call us!
+            Our professionals will come to your place, assemble, and put it in
+            your desired place.
+          </h2>
+          <Button variant="accent" className="font-bold font-space text-lg">
+            Contact Us
+          </Button>
         </div>
-
-        <div>
+        <div className="rounded-lg overflow-clip">
           <img src="furniture.jpg" alt="cozy-furniture" />
         </div>
       </div>
