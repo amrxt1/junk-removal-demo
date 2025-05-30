@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Offers from "./components/Offers";
 import Gallery from "./components/Gallery";
+import WhyUs from "./components/WhyUs";
 import FindUs from "./components/FindUs";
 import Footer from "./components/Footer";
 
@@ -18,6 +19,7 @@ function App() {
       <Hero />
       <Offers />
       {/* <Gallery /> */}
+      <WhyUs />
       <FindUs />
       <Footer />
     </>
