@@ -2,6 +2,8 @@ import Container from "./shared/Container";
 
 import mailIcon from "../assets/images/mail.svg";
 import phoneIcon from "../assets/images/phone.svg";
+import instaIcon from "../assets/images/instagram.svg";
+import facebookIcon from "../assets/images/facebook.svg";
 
 function Footer() {
   return (
@@ -20,16 +22,35 @@ function Footer() {
             </p>
           </div>
           <div className="">
-            <p className="mb-2 text-lg font-semibold">Helpful Links</p>
+            <p className="mb-2 text-lg font-bold">Helpful Links</p>
             <nav className="flex flex-col">
-              <a href="#top">Back to Top</a>
+              <a href="#top" className="mb-1 font-semibold">
+                Back to Top
+              </a>
               <a href="#offers">What We Offer</a>
               <a href="#map">Our Location</a>
             </nav>
           </div>
         </div>
-        <p className="text-sm text-gray-300 mt-12">
-          © {new Date().getFullYear()} SDIARS. All rights reserved.
+        <div className="flex items-center gap-2 justify-center mt-8">
+          <p>Stay updated:</p>
+          <a href="https://instagram.com/amrit_veer_singh">
+            <img
+              src={instaIcon}
+              alt="company-instagram"
+              className="w-10 h-10"
+            />
+          </a>
+          <a href="https://facebook.com/RocketFuelHydrogen">
+            <img
+              src={facebookIcon}
+              alt="company-facebook"
+              className="w-10 h-10"
+            />
+          </a>
+        </div>
+        <p className="text-sm text-gray-300 mt-12 text-center">
+          ©{new Date().getFullYear()} SDIARS. All rights reserved.
         </p>
       </footer>
     </Container>
