@@ -4,7 +4,7 @@ import Button from "./shared/Button";
 function Hero() {
   return (
     <Container>
-      <div className="flex flex-col pt-16 pb-32 text-center gap-8">
+      <div id="hero" className="flex flex-col pt-16 pb-32 text-center gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="text-3xl font-space font-bold">
             Expert Assembly, Right Where You Need It

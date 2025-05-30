@@ -28,7 +28,7 @@ const cards = [
 
 function Offers() {
   return (
-    <Container className="bg-text py-12">
+    <Container id="offers" className="bg-text py-12">
       <h1
         id="offer"
         className="text-background pb-2 font-space font-bold text-2xl"
