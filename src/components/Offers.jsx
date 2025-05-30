@@ -2,7 +2,7 @@ import Container from "./shared/Container";
 
 function Card({ title, desc }) {
   return (
-    <div className="bg-background px-4 py-13">
+    <div className="bg-background px-4 py-13 rounded-lg">
       <div className="space-y-2">
         <h2 className="text-xl font-space font-bold">{title}</h2>
         <p className="text-lg">{desc}</p>
