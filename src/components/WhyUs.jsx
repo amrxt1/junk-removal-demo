@@ -2,6 +2,8 @@ import Container from "./shared/Container";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css/pagination";
 
 const reasons = [
   {
@@ -24,25 +26,26 @@ const reasons = [
 
 function Card({ title, desc }) {
   return (
-    <div className="bg-text text-background py-16 aspect-[4/3] px-4 rounded-lg">
-      <h3 className="font-space font-bold text-2xl pb-4">{title}</h3>
-      <p>{desc}</p>
+    <div className="h-full bg-text text-background py-16 aspect-[4/3] px-4 rounded-lg">
+      <h3 className="font-space font-bold text-xl pb-2">{title}</h3>
+      <p className="text-lg">{desc}</p>
     </div>
   );
 }
 
 function WhyUs() {
   return (
-    <Container>
-      <h1>Why Choose Us:</h1>
+    <Container className="py-12">
+      <h1 className="text-2xl font-space font-bold">Why Choose Us:</h1>
       <Swiper
+        modules={[Autoplay, Pagination]}
         spaceBetween={16}
         slidesPerView={1}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 4000 }}
         pagination={{ clickable: true }}
         loop={true}
         breakpoints={{
-          640: { slidesPerView: 1.2 },
+          640: { slidesPerView: 1.25 },
           768: { slidesPerView: 2 },
         }}
       >
