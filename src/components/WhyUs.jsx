@@ -26,7 +26,7 @@ const reasons = [
 
 function Card({ title, desc }) {
   return (
-    <div className="h-full bg-text text-background py-16 aspect-[4/3] px-4 rounded-lg">
+    <div className="h-full bg-text text-background py-16 aspect-[4/3] px-4 rounded-lg overflow-clip">
       <h3 className="font-space font-bold text-xl pb-2">{title}</h3>
       <p className="text-lg">{desc}</p>
     </div>
