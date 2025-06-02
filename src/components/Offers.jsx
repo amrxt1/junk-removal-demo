@@ -31,7 +31,7 @@ function Offers() {
     <Container id="offers" className="bg-text py-12">
       <h1
         id="offer"
-        className="text-background pb-2 font-space font-bold text-2xl"
+        className="text-background pb-2 font-space font-bold text-2xl text-center"
       >
         What We Offer:
       </h1>
