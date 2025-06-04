@@ -4,7 +4,7 @@ function FindUs() {
   return (
     <Container className="pt-12 pb-16">
       <div className="text-center">
-        <h1 id="map" className="text-2xl font-space font-bold mb-4">
+        <h1 id="map" className="text-2xl font-space font-bold pb-2">
           Find us here
         </h1>
         <div className="w-full aspect-square rounded-xl border border-gray-300 shadow-md overflow-hidden">

@@ -1,60 +1,79 @@
 import Container from "./shared/Container";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import { Autoplay, Pagination } from "swiper/modules";
-import "swiper/css/pagination";
-
-const reasons = [
-  {
-    title: "Transparent Pricing",
-    desc: "No hidden fees. Our quotes are clear, upfront, and fair — always.",
-  },
-  {
-    title: "Trained Professionals",
-    desc: "Every technician on our team is trained, vetted, and committed to top-tier service.",
-  },
-  {
-    title: "Flexible Scheduling",
-    desc: "Book when it works for you — same-day, weekend, or evening slots available.",
-  },
-  {
-    title: "Local & Trusted",
-    desc: "We're a local team that knows the Lower Mainland — and our reviews prove it.",
-  },
-];
-
-function Card({ title, desc }) {
-  return (
-    <div className="h-full bg-text text-background py-16 aspect-[4/3] px-4 rounded-lg overflow-clip">
-      <h3 className="font-space font-bold text-xl pb-2">{title}</h3>
-      <p className="text-lg">{desc}</p>
-    </div>
-  );
-}
-
 function WhyUs() {
   return (
     <Container className="py-12">
-      <h1 className="text-2xl font-space font-bold">Why Choose Us:</h1>
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        spaceBetween={16}
-        slidesPerView={1}
-        autoplay={{ delay: 4000 }}
-        pagination={{ clickable: true }}
-        loop={true}
-        breakpoints={{
-          640: { slidesPerView: 1.25 },
-          768: { slidesPerView: 2 },
-        }}
-      >
-        {reasons.map((reason, idx) => (
-          <SwiperSlide key={idx}>
-            <Card title={reason.title} desc={reason.desc} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div>
+        <h1 className="text-2xl font-space font-bold text-center pb-6">
+          Why Choose Us:
+        </h1>
+
+        <div className="grid grid-cols-3 gap-2 auto-rows-fr">
+          {/* Transparent Pricing */}
+          <div
+            className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center"
+            style={{
+              backgroundImage: "url(/src/assets/images/home/pricing.jpg)",
+            }}
+          >
+            <div className="absolute inset-0 bg-black/30 z-0" />
+            <div className="relative z-10 p-4 text-white flex flex-col justify-between h-full">
+              <h3 className="text-xl font-bold font-space mb-2 text-center">
+                Transparent Pricing
+              </h3>
+              <p className="text-base opacity-90 text-center">
+                What we quote is what you pay — no surprises.
+              </p>
+            </div>
+          </div>
+
+          {/* We Haul Old Stuff */}
+          <div
+            className="bg-background text-text border border-foreground/10 p-4 rounded-md 
+                         col-span-1 flex flex-col justify-between h-full"
+          >
+            <h3 className="text-xl font-bold font-space mb-2">
+              We Haul Old Stuff
+            </h3>
+            <p className="text-base opacity-80">
+              Furniture, mattresses, appliances — out of your way.
+            </p>
+          </div>
+
+          {/* Local & Trusted */}
+          <div
+            className="bg-background text-text border border-foreground/10 p-4 rounded-md 
+                       col-span-1 flex flex-col justify-between h-full"
+          >
+            <h3 className="text-xl font-bold font-space mb-2">
+              Local & Trusted
+            </h3>
+            <p className="text-base opacity-80">
+              We’re a local team that knows the Lower Mainland — and our reviews
+              prove it.
+            </p>
+          </div>
+
+          {/* Expert Technicians */}
+          <div
+            className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center shadow-md"
+            style={{
+              backgroundImage: "url(/src/assets/images/home/moving-crew.jpg)",
+            }}
+          >
+            <div className="absolute inset-0 bg-black/30 z-0" />
+            <div className="relative z-10 p-4 text-white flex flex-col justify-between h-full">
+              <h3 className="text-xl font-bold font-space mb-2 text-center">
+                Expert Technicians
+              </h3>
+              <p className="text-base opacity-90 text-center">
+                Certified, vetted, and experienced — we work with all major
+                brands.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </Container>
   );
 }
