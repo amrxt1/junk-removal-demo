@@ -4,8 +4,8 @@ function WhyUs() {
   return (
     <Container className="py-12">
       <div>
-        <h1 className="text-2xl font-space font-bold text-center pb-6">
-          Why Choose Us:
+        <h1 className="text-2xl font-space font-bold text-center pb-6 text-text">
+          Why Clients Trust Us
         </h1>
 
         <div className="grid grid-cols-3 gap-2 auto-rows-fr">
@@ -29,7 +29,7 @@ function WhyUs() {
 
           {/* We Haul Old Stuff */}
           <div
-            className="bg-background text-text border border-foreground/10 p-4 rounded-md 
+            className="bg-background text-text border border-text/33 p-4 rounded-md 
                          col-span-1 flex flex-col justify-between h-full"
           >
             <h3 className="text-xl font-bold font-space mb-2">
@@ -42,7 +42,7 @@ function WhyUs() {
 
           {/* Local & Trusted */}
           <div
-            className="bg-background text-text border border-foreground/10 p-4 rounded-md 
+            className="bg-background text-text border border-text/33 p-4 rounded-md 
                        col-span-1 flex flex-col justify-between h-full"
           >
             <h3 className="text-xl font-bold font-space mb-2">
