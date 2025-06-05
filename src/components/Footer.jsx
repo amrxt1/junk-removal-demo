@@ -36,6 +36,7 @@ function Footer() {
           <p>Stay updated:</p>
           <a href="https://instagram.com/amrit_veer_singh">
             <img
+              loading="lazy"
               src={instaIcon}
               alt="company-instagram"
               className="w-10 h-10"
@@ -43,6 +44,7 @@ function Footer() {
           </a>
           <a href="https://facebook.com/RocketFuelHydrogen">
             <img
+              loading="lazy"
               src={facebookIcon}
               alt="company-facebook"
               className="w-10 h-10"

@@ -1,10 +1,18 @@
 import Container from "./shared/Container";
 import Button from "./shared/Button";
 
+import { motion } from "motion/react";
+
 function Hero() {
   return (
     <Container>
-      <div id="hero" className="flex flex-col pt-16 pb-32 text-center gap-8">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.3 }}
+        id="hero"
+        className="flex flex-col pt-16 pb-32 text-center gap-8"
+      >
         <div className="flex flex-col gap-4">
           <h1 className="text-3xl font-space font-bold">
             Expert Assembly, Right Where You Need It
@@ -18,10 +26,14 @@ function Hero() {
             Contact Us
           </Button>
         </div>
-        <div className="rounded-lg overflow-clip">
-          <img src="furniture.jpg" alt="cozy-furniture" />
+        <div className="rounded-lg overflow-clip aspect-[14/9] ">
+          <img
+            src="furniture.svg"
+            alt="cozy-furniture"
+            className="w-full h-full object-cover rounded-lg"
+          />
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 }
