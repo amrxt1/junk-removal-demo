@@ -19,6 +19,7 @@ export default function Button({
   return (
     <motion.button
       whileTap={{ scale: 0.95 }}
+      transition={{ duration: 0.1 }}
       className={`${base} ${variants[variant]} ${className}`}
       {...props}
       onClick={onClick}

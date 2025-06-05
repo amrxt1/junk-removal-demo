@@ -1,4 +1,36 @@
 import Container from "./shared/Container";
+import { motion, useAnimation, useInView } from "motion/react";
+import { useEffect, useRef } from "react";
+
+function AnimateOnScroll({ children, direction = "left", delay = 0 }) {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const inView = useInView(ref, { margin: "-10% 0px -10% 0px", once: false });
+
+  const xStart = direction === "left" ? -100 : 100;
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.6, ease: "linear", delay },
+      });
+    } else {
+      controls.start({ x: xStart, opacity: 0 });
+    }
+  }, [inView, controls, xStart, delay]);
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ x: xStart, opacity: 0 }}
+      animate={controls}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 function WhyUs() {
   return (
@@ -8,9 +40,13 @@ function WhyUs() {
           Why Clients Trust Us
         </h1>
 
-        <div className="grid grid-cols-3 gap-2 auto-rows-fr">
+        <div className="grid grid-cols-3 gap-2 auto-rows-fr relative overflow-hidden">
           {/* Transparent Pricing */}
-          <div
+          <motion.div
+            initial={{ opacity: 1, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 1, x: -100 }}
+            transition={{ duration: 1.5 }}
             className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center"
             style={{
               backgroundImage: "url(/src/assets/images/home/pricing.jpg)",
@@ -25,10 +61,14 @@ function WhyUs() {
                 What we quote is what you pay — no surprises.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* We Haul Old Stuff */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.6 }}
             className="bg-background text-text border border-text/33 p-4 rounded-md 
                          col-span-1 flex flex-col justify-between h-full"
           >
@@ -38,10 +78,14 @@ function WhyUs() {
             <p className="text-base opacity-80">
               Furniture, mattresses, appliances — out of your way.
             </p>
-          </div>
+          </motion.div>
 
           {/* Local & Trusted */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.6 }}
             className="bg-background text-text border border-text/33 p-4 rounded-md 
                        col-span-1 flex flex-col justify-between h-full"
           >
@@ -52,10 +96,14 @@ function WhyUs() {
               We’re a local team that knows the Lower Mainland — and our reviews
               prove it.
             </p>
-          </div>
+          </motion.div>
 
           {/* Expert Technicians */}
-          <div
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 100 }}
+            transition={{ duration: 0.6 }}
             className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center shadow-md"
             style={{
               backgroundImage: "url(/src/assets/images/home/moving-crew.jpg)",
@@ -71,7 +119,7 @@ function WhyUs() {
                 brands.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </Container>
