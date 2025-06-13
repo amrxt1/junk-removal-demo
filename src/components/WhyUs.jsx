@@ -1,5 +1,7 @@
 import Container from "./shared/Container";
 import { motion } from "motion/react";
+import pricingImage from "/src/assets/images/home/pricing.jpg";
+import crewImage from "/src/assets/images/home/moving-crew.jpg";
 
 function WhyUs() {
   return (
@@ -18,7 +20,7 @@ function WhyUs() {
             transition={{ duration: 0.6 }}
             className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center"
             style={{
-              backgroundImage: "url(/src/assets/images/home/pricing.jpg)",
+              backgroundImage: `url(${pricingImage})`,
             }}
           >
             <div className="absolute inset-0 bg-black/30 z-0" />
@@ -75,7 +77,7 @@ function WhyUs() {
             transition={{ duration: 0.6 }}
             className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center shadow-md"
             style={{
-              backgroundImage: "url(/src/assets/images/home/moving-crew.jpg)",
+              backgroundImage: `url(${crewImage})`,
             }}
           >
             <div className="absolute inset-0 bg-black/30 z-0" />
