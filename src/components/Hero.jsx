@@ -30,7 +30,7 @@ function Hero() {
               everything.
             </p>
           </h2>
-          <Button variant="accent" className="font-bold font-space text-lg">
+          <Button variant="accent" className="font-bold font-space text-xl">
             Contact Us
           </Button>
         </div>
