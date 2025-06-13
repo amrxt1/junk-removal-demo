@@ -18,9 +18,11 @@ function Hero() {
             Expert Assembly, Right Where You Need It
           </h1>
           <h2 className=" text-xl">
-            Bought something, but don't know how to put it together? Call us!
-            Our professionals will come to your place, assemble, and put it in
-            your desired place.
+            <p>Bought something, but don't know how to put it together?</p>
+            <p>
+              Call us! Our professionals will come to your place, and assemble
+              everything.
+            </p>
           </h2>
           <Button variant="accent" className="font-bold font-space text-lg">
             Contact Us
@@ -28,7 +30,7 @@ function Hero() {
         </div>
         <div className="rounded-lg overflow-clip aspect-[14/9] ">
           <img
-            src="furniture.svg"
+            src="furniture.jpg"
             alt="cozy-furniture"
             className="w-full h-full object-cover rounded-lg"
           />
