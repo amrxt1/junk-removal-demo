@@ -1,97 +1,49 @@
 import Container from "./shared/Container";
 import { motion } from "motion/react";
-import pricingImage from "/src/assets/images/home/pricing.jpg";
-import crewImage from "/src/assets/images/home/moving-crew.jpg";
+
+const cards = [
+  {
+    title: "Transparent Pricing",
+    content: "What we quote is what you pay. No upsells. No hidden fees.",
+    color: "bg-blue-50 text-blue-900",
+  },
+  {
+    title: "We Haul the Old Stuff",
+    content:
+      "We don’t just install — we take care of the mess. Old furniture and packaging? Gone.",
+    color: "bg-yellow-50 text-yellow-900",
+  },
+  {
+    title: "Local & Trusted",
+    content:
+      "We’re not some faceless platform. We live here, we work here, and our reviews speak for themselves.",
+    color: "bg-green-50 text-green-900",
+  },
+  {
+    title: "Expert Technicians",
+    content:
+      "We work with all major brands and equipment types. Trained. Insured. Reliable.",
+    color: "bg-gray-100 text-gray-800",
+  },
+];
+
+function Card({ title, content, color }) {
+  return (
+    <div className={color + " p-8 rounded-lg mb-8 border-2"}>
+      <h1 className="font-bold text-xl mb-4">{title} </h1>
+      <p>{content} </p>
+    </div>
+  );
+}
 
 function WhyUs() {
   return (
     <Container className="py-12">
-      <div>
-        <h1 className="text-2xl font-space font-bold text-center pb-6 text-text">
-          Why Clients Trust Us
-        </h1>
-
-        <div className="grid grid-cols-3 gap-2 auto-rows-fr relative overflow-hidden">
-          {/* Transparent Pricing */}
-          <motion.div
-            initial={{ opacity: 1, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 1, x: -100 }}
-            transition={{ duration: 0.6 }}
-            className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${pricingImage})`,
-            }}
-          >
-            <div className="absolute inset-0 bg-black/30 z-0" />
-            <div className="relative z-10 p-4 text-white flex flex-col justify-between h-full">
-              <h3 className="text-xl font-bold font-space mb-2 text-center">
-                Transparent Pricing
-              </h3>
-              <p className="text-base opacity-90 text-center">
-                What we quote is what you pay — no surprises.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* We Haul Old Stuff */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 100 }}
-            transition={{ duration: 0.6 }}
-            className="bg-background text-text border border-text/33 p-4 rounded-md 
-                         col-span-1 flex flex-col justify-between h-full"
-          >
-            <h3 className="text-xl font-bold font-space mb-2">
-              We Haul Old Stuff
-            </h3>
-            <p className="text-base opacity-80">
-              Furniture, mattresses, appliances — out of your way.
-            </p>
-          </motion.div>
-
-          {/* Local & Trusted */}
-          <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.6 }}
-            className="bg-background text-text border border-text/33 p-4 rounded-md 
-                       col-span-1 flex flex-col justify-between h-full"
-          >
-            <h3 className="text-xl font-bold font-space mb-2">
-              Local & Trusted
-            </h3>
-            <p className="text-base opacity-80">
-              We’re a local team that knows the Lower Mainland — and our reviews
-              prove it.
-            </p>
-          </motion.div>
-
-          {/* Expert Technicians */}
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 100 }}
-            transition={{ duration: 0.6 }}
-            className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center shadow-md"
-            style={{
-              backgroundImage: `url(${crewImage})`,
-            }}
-          >
-            <div className="absolute inset-0 bg-black/30 z-0" />
-            <div className="relative z-10 p-4 text-white flex flex-col justify-between h-full">
-              <h3 className="text-xl font-bold font-space mb-2 text-center">
-                Expert Technicians
-              </h3>
-              <p className="text-base opacity-90 text-center">
-                Certified, vetted, and experienced — we work with all major
-                brands.
-              </p>
-            </div>
-          </motion.div>
-        </div>
+      <h1 className="text-center font-space font-bold text-2xl mb-8">Why Us</h1>
+      <div className="cards ">
+        {cards.map((card, index) => {
+          return <Card key={index} {...card} />;
+        })}
       </div>
     </Container>
   );

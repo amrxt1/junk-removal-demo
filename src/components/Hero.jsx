@@ -5,7 +5,8 @@ import { motion } from "motion/react";
 
 function Hero() {
   return (
-    <Container>
+    <Container className="relative">
+      <div className="absolute inset-0" />
       <div className="absolute top-10 left-10 w-40 h-40 bg-accent rounded-full filter blur-3xl opacity-30 -z-10" />
       <div className="absolute bottom-20 right-20 w-64 h-64 bg-accent rounded-full filter blur-2xl opacity-20 -z-10" />
 
@@ -23,7 +24,7 @@ function Hero() {
             </span>
             , Right Where You Need It
           </h1>
-          <h2 className=" text-xl">
+          <h2 className=" text-xl ">
             <p>Bought something, but don't know how to put it together?</p>
             <p>
               Call us! Our professionals will come to your place, and assemble
@@ -34,6 +35,7 @@ function Hero() {
             Contact Us
           </Button>
         </div>
+
         <div className="rounded-lg overflow-clip aspect-[14/9] shadow-lg ">
           <img
             src="furniture.jpg"
