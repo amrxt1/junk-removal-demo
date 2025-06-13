@@ -1,36 +1,5 @@
 import Container from "./shared/Container";
-import { motion, useAnimation, useInView } from "motion/react";
-import { useEffect, useRef } from "react";
-
-function AnimateOnScroll({ children, direction = "left", delay = 0 }) {
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const inView = useInView(ref, { margin: "-10% 0px -10% 0px", once: false });
-
-  const xStart = direction === "left" ? -100 : 100;
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({
-        x: 0,
-        opacity: 1,
-        transition: { duration: 0.6, ease: "linear", delay },
-      });
-    } else {
-      controls.start({ x: xStart, opacity: 0 });
-    }
-  }, [inView, controls, xStart, delay]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ x: xStart, opacity: 0 }}
-      animate={controls}
-    >
-      {children}
-    </motion.div>
-  );
-}
+import { motion } from "motion/react";
 
 function WhyUs() {
   return (
@@ -46,7 +15,7 @@ function WhyUs() {
             initial={{ opacity: 1, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             exit={{ opacity: 1, x: -100 }}
-            transition={{ duration: 1.5 }}
+            transition={{ duration: 0.6 }}
             className="relative col-span-2 rounded-md overflow-hidden bg-cover bg-center"
             style={{
               backgroundImage: "url(/src/assets/images/home/pricing.jpg)",
