@@ -12,7 +12,7 @@ const cards = [
     title: "We Haul the Old Stuff",
     content:
       "We don’t just install — we take care of the mess. Old furniture and packaging? Gone.",
-    color: "bg-yellow-200 text-yellow-900",
+    color: "bg-gray-200 text-gray-800",
   },
   {
     title: "Local & Trusted",
