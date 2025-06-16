@@ -7,7 +7,7 @@ const cards = [
     title: "Transparent Pricing",
     content: "What we quote is what you pay. No hidden fees.",
     color:
-      "flex flex-col h-full justify-end pl-8 pb-4 w-[50%] text-text drop-shadow-sm",
+      "flex flex-col h-full justify-end pl-8 pb-4 w-[50%] drop-shadow-sm",
     imgSrc: "pricing.png",
   },
   {
@@ -15,14 +15,14 @@ const cards = [
     content:
       "We don’t just install — we take care of the mess. Old furniture and packaging? Gone.",
     color:
-      "flex flex-col h-full justify-end pb-4 pl-4 text-white w-[77%] drop-shadow-sm",
+      "flex flex-col h-full justify-end pb-4 pl-4 w-[77%] drop-shadow-sm",
     imgSrc: "hauling.png",
   },
   {
     title: "Local & Trusted",
     content: "We operate locally and our reviews speak volumes.",
     color:
-      "flex flex-col h-full justify-end pb-10 pl-4 text-blue-200 w-[77%] drop-shadow-sm ",
+      "flex flex-col h-full justify-end pb-10 pl-4 w-[77%] drop-shadow-sm ",
     imgSrc: "trust.png",
   },
   {
@@ -30,7 +30,7 @@ const cards = [
     content:
       "We work with all major brands and equipment types. Trained. Insured. Reliable.",
     color:
-      "flex flex-col h-full justify-end pb-4 pl-4 text-white w-[77%] drop-shadow-sm",
+      "flex flex-col h-full justify-end pb-4 pl-4 w-[77%] drop-shadow-sm",
     imgSrc: "technician.png",
   },
   {
@@ -38,7 +38,7 @@ const cards = [
     content:
       "Book appointments at your convenience — evenings and weekends available.",
     color:
-      "flex flex-col h-full justify-start pt-12 pl-4 text-white w-[77%] drop-shadow-sm",
+      "flex flex-col h-full justify-start pt-12 pl-4 w-[77%] drop-shadow-sm",
     imgSrc: "flexibility.png",
   },
 ];
@@ -86,7 +86,7 @@ function WhyUs() {
         <h1 className="text-center font-space font-bold text-2xl pb-8 sticky top-[10vh] ">
           Why Us
         </h1>
-        <div className="pb-1">
+        <div className="pb-1 text-white">
           {cards.map((card, index) => {
             const targetScale = 1 - (cards.length - index) * 0.05;
             return (
