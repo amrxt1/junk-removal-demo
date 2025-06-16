@@ -7,40 +7,59 @@ const cards = [
     title: "Transparent Pricing",
     content: "What we quote is what you pay. No upsells. No hidden fees.",
     color: "bg-blue-200 text-blue-900",
+    imgSrc: "pricing.png",
   },
   {
     title: "We Haul the Old Stuff",
     content:
       "We don’t just install — we take care of the mess. Old furniture and packaging? Gone.",
     color: "bg-gray-200 text-gray-800",
+    imgSrc: "hauling.png",
   },
   {
     title: "Local & Trusted",
     content:
       "We’re not some faceless platform. We live here, we work here, and our reviews speak for themselves.",
     color: "bg-green-200 text-green-900",
+    imgSrc: "trust.png",
   },
   {
     title: "Expert Technicians",
     content:
       "We work with all major brands and equipment types. Trained. Insured. Reliable.",
     color: "bg-gray-200 text-gray-800",
+    imgSrc: "technician.png",
   },
   {
-    title: "Transparent Pricing",
-    content: "What we quote is what you pay. No upsells. No hidden fees.",
+    title: "Flexible Scheduling",
+    content:
+      "Book appointments at your convenience — evenings and weekends available.",
     color: "bg-blue-200 text-blue-900",
+    imgSrc: "flexibility.png",
   },
 ];
 
-function Card({ title, content, color, i, targetScale, range, progress }) {
+function Card({
+  title,
+  content,
+  color,
+  imgSrc,
+  i,
+  targetScale,
+  range,
+  progress,
+}) {
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <motion.div
       className={
-        color + " p-8 py-16 rounded-lg mb-8 border-2 aspect-[4/3] sticky"
+        "text-white p-8 py-16 rounded-lg mb-8 border-2 aspect-square sticky bg-cover bg-center"
       }
-      style={{ scale, top: `calc(17vh + ${i * 20}px)` }}
+      style={{
+        scale,
+        top: `calc(17vh + ${i * 20}px)`,
+        backgroundImage: `url(${imgSrc})`,
+      }}
     >
       <h1 className="font-bold text-xl mb-4">{title} </h1>
       <p>{content} </p>
