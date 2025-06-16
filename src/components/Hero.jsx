@@ -15,7 +15,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.3 }}
         id="hero"
-        className="flex flex-col pt-16 pb-32 text-center gap-8"
+        className="flex flex-col pt-16 pb-24 text-center gap-8"
       >
         <div className="flex flex-col gap-4">
           <h1 className="text-3xl font-space font-bold ">
@@ -38,7 +38,7 @@ function Hero() {
 
         <div className="rounded-lg overflow-clip aspect-[14/9] shadow-lg ">
           <img
-            src="furniture.jpg"
+            src="furniture.png"
             alt="cozy-furniture"
             className="w-full h-full object-cover rounded-lg"
           />
