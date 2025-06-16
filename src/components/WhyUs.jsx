@@ -5,36 +5,40 @@ import { useRef } from "react";
 const cards = [
   {
     title: "Transparent Pricing",
-    content: "What we quote is what you pay. No upsells. No hidden fees.",
-    color: "bg-blue-200 text-blue-900",
+    content: "What we quote is what you pay. No hidden fees.",
+    color:
+      "flex flex-col h-full justify-end pl-8 pb-4 w-[50%] text-text drop-shadow-sm",
     imgSrc: "pricing.png",
   },
   {
     title: "We Haul the Old Stuff",
     content:
       "We don’t just install — we take care of the mess. Old furniture and packaging? Gone.",
-    color: "bg-gray-200 text-gray-800",
+    color:
+      "flex flex-col h-full justify-end pb-4 pl-4 text-white w-[77%] drop-shadow-sm",
     imgSrc: "hauling.png",
   },
   {
     title: "Local & Trusted",
-    content:
-      "We’re not some faceless platform. We live here, we work here, and our reviews speak for themselves.",
-    color: "bg-green-200 text-green-900",
+    content: "We operate locally and our reviews speak volumes.",
+    color:
+      "flex flex-col h-full justify-end pb-10 pl-4 text-blue-200 w-[77%] drop-shadow-sm ",
     imgSrc: "trust.png",
   },
   {
     title: "Expert Technicians",
     content:
       "We work with all major brands and equipment types. Trained. Insured. Reliable.",
-    color: "bg-gray-200 text-gray-800",
+    color:
+      "flex flex-col h-full justify-end pb-4 pl-4 text-white w-[77%] drop-shadow-sm",
     imgSrc: "technician.png",
   },
   {
     title: "Flexible Scheduling",
     content:
       "Book appointments at your convenience — evenings and weekends available.",
-    color: "bg-blue-200 text-blue-900",
+    color:
+      "flex flex-col h-full justify-start pt-12 pl-4 text-white w-[77%] drop-shadow-sm",
     imgSrc: "flexibility.png",
   },
 ];
@@ -52,17 +56,18 @@ function Card({
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <motion.div
-      className={
-        "text-white p-8 py-16 rounded-lg mb-8 border-2 aspect-square sticky bg-cover bg-center"
-      }
+      className={`rounded-lg mb-8 aspect-square sticky bg-cover bg-center overflow-clip`}
       style={{
         scale,
-        top: `calc(17vh + ${i * 20}px)`,
+        top: `calc(17vh + ${i * 15}px)`,
         backgroundImage: `url(${imgSrc})`,
       }}
     >
-      <h1 className="font-bold text-xl mb-4">{title} </h1>
-      <p>{content} </p>
+      <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+      <div className={`${color} z-10`}>
+        <h1 className="font-bold text-3xl mb-2">{title} </h1>
+        <p className="font-semibold text-xl">{content} </p>
+      </div>
     </motion.div>
   );
 }
@@ -83,7 +88,7 @@ function WhyUs() {
         </h1>
         <div className="pb-1">
           {cards.map((card, index) => {
-            const targetScale = 1 - (cards.length - index) * 0.025;
+            const targetScale = 1 - (cards.length - index) * 0.05;
             return (
               <Card
                 key={index}
