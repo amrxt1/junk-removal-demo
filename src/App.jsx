@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect } from "react";
 
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -8,10 +8,18 @@ import WhyUs from "./components/WhyUs";
 import FindUs from "./components/FindUs";
 import Footer from "./components/Footer";
 
-function App() {
-  const [count, setCount] = useState(0);
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
-  setTimeout(() => setCount(count + 1), 1000);
+function App() {
+  useEffect(() => {
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <>
