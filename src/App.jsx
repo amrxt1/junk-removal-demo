@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
       <Offers />
       {/* <Gallery /> */}
       <WhyUs />
+      <ContactForm />
       <FindUs />
       <Footer />
     </>

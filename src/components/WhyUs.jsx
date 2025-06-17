@@ -6,16 +6,14 @@ const cards = [
   {
     title: "Transparent Pricing",
     content: "What we quote is what you pay. No hidden fees.",
-    color:
-      "flex flex-col h-full justify-end pl-8 pb-4 w-[50%] drop-shadow-sm",
+    color: "flex flex-col h-full justify-end pl-8 pb-4 w-[50%] drop-shadow-sm",
     imgSrc: "pricing.png",
   },
   {
     title: "We Haul the Old Stuff",
     content:
       "We don’t just install — we take care of the mess. Old furniture and packaging? Gone.",
-    color:
-      "flex flex-col h-full justify-end pb-4 pl-4 w-[77%] drop-shadow-sm",
+    color: "flex flex-col h-full justify-end pb-4 pl-4 w-[77%] drop-shadow-sm",
     imgSrc: "hauling.png",
   },
   {
@@ -29,8 +27,7 @@ const cards = [
     title: "Expert Technicians",
     content:
       "We work with all major brands and equipment types. Trained. Insured. Reliable.",
-    color:
-      "flex flex-col h-full justify-end pb-4 pl-4 w-[77%] drop-shadow-sm",
+    color: "flex flex-col h-full justify-end pb-4 pl-4 w-[77%] drop-shadow-sm",
     imgSrc: "technician.png",
   },
   {
