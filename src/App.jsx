@@ -1,18 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
-
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Offers from "./components/Offers";
-import Gallery from "./components/Gallery";
-import WhyUs from "./components/WhyUs";
-import FindUs from "./components/FindUs";
-import Footer from "./components/Footer";
-
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
-import ContactForm from "./components/ContactForm";
 
-function App() {
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+
+export default function App() {
   useEffect(() => {
     const lenis = new Lenis();
     function raf(time) {
@@ -21,18 +20,16 @@ function App() {
     }
     requestAnimationFrame(raf);
   }, []);
-
   return (
-    <>
+    <Router>
       <Header />
-      <Hero />
-      <Offers />
-      <WhyUs />
-      <ContactForm />
-      <FindUs />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }
-
-export default App;

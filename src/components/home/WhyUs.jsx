@@ -1,4 +1,4 @@
-import Container from "./shared/Container";
+import Container from "../shared/Container";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 

@@ -1,4 +1,4 @@
-import Container from "./shared/Container";
+import Container from "../shared/Container";
 
 import "swiper/css";
 import "swiper/css/pagination";
