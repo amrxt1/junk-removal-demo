@@ -2,8 +2,8 @@ import Container from "../shared/Container";
 
 function FindUs() {
   return (
-    <Container className="pt-12 pb-16">
-      <div className="text-center">
+    <Container className="pt-12 pb-16 md:flex md:justify-center">
+      <div className="text-center md:w-[50%] ">
         <h1 id="map" className="text-2xl font-space font-bold pb-2">
           Find us here
         </h1>

@@ -53,10 +53,10 @@ function Card({
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <motion.div
-      className={`rounded-lg mb-8 aspect-square sticky bg-cover bg-center overflow-clip`}
+      className={`rounded-lg mb-8 aspect-square sticky bg-cover bg-center overflow-clip md:aspect-[16/9] md:mb-64 `}
       style={{
         scale,
-        top: `calc(17vh + ${i * 15}px)`,
+        top: `calc(13vh + ${i * 25}px)`,
         backgroundImage: `url(${imgSrc})`,
       }}
     >
@@ -78,14 +78,14 @@ function WhyUs() {
   });
 
   return (
-    <Container className="pt-12 pb-8">
+    <Container className="pt-12">
       <div ref={container} className="relative">
         <h1 className="text-center font-space font-bold text-2xl pb-8 sticky top-[10vh] ">
           Why Us
         </h1>
         <div className="pb-1 text-white">
           {cards.map((card, index) => {
-            const targetScale = 1 - (cards.length - index) * 0.05;
+            const targetScale = 1 - (cards.length - index) * 0.04;
             return (
               <Card
                 key={index}

@@ -48,11 +48,16 @@ function Offers() {
       </h1>
       <Swiper
         modules={[Autoplay, Pagination]}
-        spaceBetween={50}
+        spaceBetween={100}
         slidesPerView={1}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+        }}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 4700,
+          delay: 3300,
           disableOnInteraction: false,
         }}
       >

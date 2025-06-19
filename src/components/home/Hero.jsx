@@ -12,16 +12,16 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.3 }}
         id="hero"
-        className="flex flex-col pt-16 pb-24 text-center gap-8 z-10"
+        className="flex flex-col pt-16 pb-24 text-center gap-8 z-10 md:flex-row"
       >
-        <div className="flex flex-col gap-4">
-          <h1 className="text-3xl font-space font-bold ">
+        <div className="flex flex-col gap-4 justify-center">
+          <h1 className="text-3xl font-space font-bold md:text-left ">
             <span className="bg-gradient-to-l from-accent to-gray-500 bg-clip-text text-transparent">
               Expert Assembly
             </span>
             , Right Where You Need It
           </h1>
-          <h2 className=" text-xl ">
+          <h2 className=" text-xl md:text-left ">
             <p>Bought something, but don't know how to put it together?</p>
             <p>
               Call us! Our professionals will come to your place, and assemble
@@ -30,7 +30,7 @@ function Hero() {
           </h2>
           <Button
             variant="accent"
-            className="font-bold font-space text-xl"
+            className="font-bold font-space text-xl md:mt-16"
             onClick={() =>
               document
                 .getElementById("contact")
