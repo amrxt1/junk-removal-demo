@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Container from "./shared/Container";
 
+import { AnimatePresence, motion } from "motion/react";
+
 function Header() {
   const [open, setOpen] = useState(false);
 
@@ -50,22 +52,30 @@ function Header() {
           </button>
         </div>
 
-        {open && (
-          <div className="px-4 pb-4 flex flex-col md:hidden mt-2 space-y-2 font-mono font-bold absolute bg-text w-full left-0">
-            <Link to="/" onClick={() => setOpen(false)}>
-              HOME
-            </Link>
-            <Link to="/services" onClick={() => setOpen(false)}>
-              SERVICES
-            </Link>
-            <Link to="/about" onClick={() => setOpen(false)}>
-              ABOUT
-            </Link>
-            <Link to="/contact" onClick={() => setOpen(false)}>
-              CONTACT
-            </Link>
-          </div>
-        )}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ x: "-100%", opacity: 0 }}
+              animate={{ x: "0%", opacity: 1 }}
+              exit={{ x: "100%", opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+              className="px-4 pb-4 flex flex-col md:hidden mt-2 space-y-2 font-mono font-bold absolute bg-text w-full left-0"
+            >
+              <Link to="/" onClick={() => setOpen(false)}>
+                HOME
+              </Link>
+              <Link to="/services" onClick={() => setOpen(false)}>
+                SERVICES
+              </Link>
+              <Link to="/about" onClick={() => setOpen(false)}>
+                ABOUT
+              </Link>
+              <Link to="/contact" onClick={() => setOpen(false)}>
+                CONTACT
+              </Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </Container>
   );
