@@ -14,11 +14,11 @@ function Footer() {
             <h3 className="pb-2 text-lg font-semibold">Contact Us</h3>
             <p className="flex gap-2 items-center">
               <img src={phoneIcon} alt="company-phone" className="w-5 h-5" />
-              <a href="tel:6047658450">604-765-8450</a>
+              <a href="tel:6047658450">604-123-XXXX</a>
             </p>
             <p className="flex gap-2 items-center">
               <img src={mailIcon} alt="company-mail" className="w-5 h-5" />
-              <a href="mailto:vrangi774@gmail.com">vrangi774@gmail.com</a>
+              <a href="mailto:vrangi774@gmail.com">hello@quickmove.com</a>
             </p>
           </div>
           <div className="">
@@ -52,7 +52,8 @@ function Footer() {
           </a>
         </div>
         <p className="text-sm text-gray-300 mt-12 text-center">
-          ©{new Date().getFullYear()} SDIARS. All rights reserved.
+          ©{new Date().getFullYear()} QuickMove Installations. All rights
+          reserved.
         </p>
       </footer>
     </Container>

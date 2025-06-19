@@ -1,6 +1,5 @@
 import Container from "./shared/Container";
 import Button from "./shared/Button";
-
 import { motion } from "motion/react";
 
 function Hero() {

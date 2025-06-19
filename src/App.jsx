@@ -27,7 +27,6 @@ function App() {
       <Header />
       <Hero />
       <Offers />
-      {/* <Gallery /> */}
       <WhyUs />
       <ContactForm />
       <FindUs />
