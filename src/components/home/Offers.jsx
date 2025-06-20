@@ -43,7 +43,7 @@ const cards = [
 function Offers() {
   return (
     <Container id="offers" className="bg-text py-12">
-      <h1 className="text-background pb-2 font-space font-bold text-2xl text-center">
+      <h1 className="text-background pb-4 md:pb-8 lg:pb-12 font-space font-bold text-2xl text-center">
         Services We Provide
       </h1>
       <Swiper
