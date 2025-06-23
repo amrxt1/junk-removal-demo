@@ -1,5 +1,5 @@
 import Container from "../components/shared/Container";
-
+import ContactForm from "../components/shared/ContactForm";
 const cards = [
   {
     title: "Same-Day Installations",
@@ -29,16 +29,19 @@ const Card = ({ title, content }) => {
 
 const Services = () => {
   return (
-    <Container className="pb-12">
-      <div className="font-space font-bold text-2xl text-center my-4">
-        Our Services
-      </div>
-      <div className="grid md:grid-cols-2 gap-6">
-        {cards.map((card, index) => {
-          return <Card key={index} {...card} />;
-        })}
-      </div>
-    </Container>
+    <>
+      <Container className="pb-12">
+        <div className="font-space font-bold text-2xl text-center my-4">
+          Our Services
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {cards.map((card, index) => {
+            return <Card key={index} {...card} />;
+          })}
+        </div>
+      </Container>
+      <ContactForm />
+    </>
   );
 };
 
