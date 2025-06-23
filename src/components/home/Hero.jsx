@@ -8,9 +8,9 @@ function Hero() {
       <div className="absolute top-10 left-10 w-40 h-40 bg-accent rounded-full filter blur-3xl opacity-30 -z-10" />
       <div className="absolute bottom-20 right-20 w-64 h-64 bg-accent rounded-full filter blur-2xl opacity-20 -z-10" />
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0.3, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.3 }}
+        transition={{ duration: 0.7 }}
         id="hero"
         className="flex flex-col pt-16 pb-24 text-center gap-8 z-10 md:flex-row"
       >
