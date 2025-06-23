@@ -6,7 +6,7 @@ const About = () => {
     <>
       <Container>
         <div className="my-8">
-          <h1 className="text-3xl font-bold mb-4 text-center">About Us</h1>
+          <h1 className="text-2xl font-bold mb-4 text-center">About Us</h1>
           <div className="mb-6 text-center">
             <img
               src="/about_image.png"

@@ -1,8 +1,8 @@
 import Hero from "../components/home/Hero";
 import Offers from "../components/home/Offers";
 import WhyUs from "../components/home/WhyUs";
-import FindUs from "../components/home/FindUs";
-import ContactForm from "../components/home/ContactForm";
+import FindUs from "../components/shared/FindUs";
+import ContactForm from "../components/shared/ContactForm";
 
 export default function Home() {
   return (
