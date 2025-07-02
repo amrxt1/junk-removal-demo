@@ -100,7 +100,7 @@ function WhyUs() {
         }}
         pagination={{ clickable: true }}
         autoplay={{
-          delay: 33000000,
+          delay: 3300,
           disableOnInteraction: false,
         }}
       >
