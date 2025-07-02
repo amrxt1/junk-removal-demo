@@ -55,7 +55,7 @@ function Card({ title, desc, testimonial }) {
   return (
     <div
       className="bg-background px-4 py-8 md:px-8 md:py-12 rounded-lg
-     aspect-[4/3] flex flex-col justify-between"
+      flex flex-col justify-between h-[45vh]"
     >
       <div className="space-y-3 text-center">
         <h2 className="text-xl font-space font-bold">{title}</h2>
@@ -64,8 +64,8 @@ function Card({ title, desc, testimonial }) {
 
       {testimonial && (
         <div
-          className="mt-6 flex items-center gap-4 bg-muted px-4 py-3
-         rounded-lg border border-border"
+          className="mt-6 flex items-center gap-4 bg-muted px-4 py-3 mb-4
+         rounded-lg border border-border "
         >
           <div
             className="w-10 h-10 rounded-full bg-red-200 border
