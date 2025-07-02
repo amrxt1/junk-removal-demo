@@ -17,15 +17,20 @@ function Hero() {
         <div className="flex flex-col gap-4 justify-center">
           <h1 className="text-3xl font-space font-bold md:text-left ">
             <span className="bg-gradient-to-l from-accent to-gray-500 bg-clip-text text-transparent">
-              Expert Assembly
+              Fast & Reliable
             </span>
-            , Right Where You Need It
+            , Junk Removal & Moving Services
           </h1>
           <h2 className=" text-xl md:text-left ">
-            <p>Bought something, but don't know how to put it together?</p>
-            <p>
-              Call us! Our professionals will come to your place, and assemble
-              everything.
+            <p className="text-gray-500">
+              Need to get rid of junk or move out—without the wait?
+            </p>
+            <p className="font-semibold">
+              <span className="text-gray-500 font-normal">
+                We offer same-day junk removal and moving help across the Lower
+                Mainland. &nbsp;
+              </span>
+              Just call, book, and relax.
             </p>
           </h2>
           <Button
@@ -43,7 +48,7 @@ function Hero() {
 
         <div className="rounded-lg overflow-clip aspect-[14/9] shadow-lg ">
           <img
-            src="furniture.png"
+            src="hero-banner.png"
             alt="cozy-furniture"
             className="w-full h-full object-cover rounded-lg"
           />
