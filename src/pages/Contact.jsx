@@ -10,7 +10,7 @@ const Contact = () => {
         </h1>
       </Container>
       <div className=" w-full flex justify-center items-center">
-        <ContactForm />
+        <ContactForm heading={false} />
       </div>
       <FindUs />
     </>

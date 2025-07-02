@@ -1,11 +1,13 @@
 import Container from "./Container";
 
-function ContactForm() {
+function ContactForm({ heading = true }) {
   return (
     <Container id="contact" className="py-12 bg-background">
-      <h1 className="text-2xl font-bold font-space text-center pb-6 text-text">
-        Book a Free Estimate
-      </h1>
+      {heading && (
+        <h1 className="text-2xl font-bold font-space text-center pb-6 text-text">
+          Book a Free Estimate
+        </h1>
+      )}
       <div className="bg-background px-4 py-12 rounded-lg  drop-shadow-2xl border-2 border-gray-300">
         <form
           onSubmit={(e) => {
