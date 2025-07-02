@@ -10,14 +10,14 @@ const cards = [
     content:
       "From broken furniture to renovation debris. We haul it fast, clean, and responsibly.",
     color: "flex flex-col h-full justify-end pl-8 pb-4 w-[60%] drop-shadow-sm",
-    imgSrc: "hauling.png",
+    imgSrc: "card-JR.png",
   },
   {
     title: "Local Moving Help",
     content:
       "Moving apartments or offices? We bring the muscle, van, and reliability you need.",
     color: "flex flex-col h-full justify-end pb-4 pl-4 w-[77%] drop-shadow-sm",
-    imgSrc: "technician.png",
+    imgSrc: "card-LMH.png",
   },
   {
     title: "Appliance & Furniture Pickup",
@@ -25,14 +25,14 @@ const cards = [
       "Bought something heavy or awkward to move? We’ll get it delivered and placed.",
     color:
       "flex flex-col h-full justify-end pb-10 pl-4 w-[77%] drop-shadow-sm ",
-    imgSrc: "trust.png",
+    imgSrc: "card-AFP.png",
   },
   {
     title: "Eco-Friendly Disposal",
     content:
       "We don’t just dump it. We sort, recycle, and dispose responsibly whenever possible.",
     color: "flex flex-col h-full justify-end pb-4 pl-4 w-[77%] drop-shadow-sm",
-    imgSrc: "pricing.png",
+    imgSrc: "card-EFD.png",
   },
   {
     title: "Same-Day Availability",

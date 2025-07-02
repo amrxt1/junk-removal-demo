@@ -4,6 +4,17 @@ import Container from "./shared/Container";
 
 import { AnimatePresence, motion } from "motion/react";
 
+function clickHandler(isMobile, setOpen) {
+  if (isMobile) {
+    setOpen(false);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 150);
+  } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
 function Header() {
   const [open, setOpen] = useState(false);
 
@@ -17,10 +28,18 @@ function Header() {
           </div>
 
           <div className="hidden md:flex font-bold font-mono gap-4">
-            <Link to="/">HOME</Link>
-            <Link to="/services">SERVICES</Link>
-            <Link to="/about">ABOUT</Link>
-            <Link to="/contact">CONTACT</Link>
+            <Link to="/" onClick={clickHandler}>
+              HOME
+            </Link>
+            <Link to="/services" onClick={() => clickHandler(false)}>
+              SERVICES
+            </Link>
+            <Link to="/about" onClick={() => clickHandler(false)}>
+              ABOUT
+            </Link>
+            <Link to="/contact" onClick={() => clickHandler(false)} s>
+              CONTACT
+            </Link>
           </div>
 
           <button
@@ -62,16 +81,16 @@ function Header() {
               className="px-4 pb-4 flex flex-col md:hidden mt-2 space-y-2 
               font-mono font-bold absolute bg-text w-full left-0"
             >
-              <Link to="/" onClick={() => setOpen(false)}>
+              <Link to="/" onClick={() => clickHandler(true, setOpen)}>
                 HOME
               </Link>
-              <Link to="/services" onClick={() => setOpen(false)}>
+              <Link to="/services" onClick={() => clickHandler(true, setOpen)}>
                 SERVICES
               </Link>
-              <Link to="/about" onClick={() => setOpen(false)}>
+              <Link to="/about" onClick={() => clickHandler(true, setOpen)}>
                 ABOUT
               </Link>
-              <Link to="/contact" onClick={() => setOpen(false)}>
+              <Link to="/contact" onClick={() => clickHandler(true, setOpen)}>
                 CONTACT
               </Link>
             </motion.div>
