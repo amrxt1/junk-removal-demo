@@ -14,11 +14,11 @@ function Footer() {
             <h3 className="pb-2 text-lg font-semibold">Contact Us</h3>
             <p className="flex gap-2 items-center">
               <img src={phoneIcon} alt="company-phone" className="w-5 h-5" />
-              <a href="tel:6047658450">604-123-XXXX</a>
+              <a href="tel:1234567890">604-123-XXXX</a>
             </p>
             <p className="flex gap-2 items-center">
               <img src={mailIcon} alt="company-mail" className="w-5 h-5" />
-              <a href="mailto:vrangi774@gmail.com">hello@quickmove.com</a>
+              <a href="mailto:amritv.dev@proton.me">hello@quickmove.com</a>
             </p>
           </div>
           <div className="">
