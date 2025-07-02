@@ -13,7 +13,7 @@ function Header() {
         <div className="flex justify-between items-center">
           <div className="font-bold font-space flex items-center gap-2">
             <img src="icon.svg" alt="icon" className="w-10 h-10" />
-            QuickMove Installations
+            QuickMove Solutions
           </div>
 
           <div className="hidden md:flex font-bold font-mono gap-4">
@@ -59,7 +59,8 @@ function Header() {
               animate={{ x: "0%", opacity: 1 }}
               exit={{ x: "100%", opacity: 0 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}
-              className="px-4 pb-4 flex flex-col md:hidden mt-2 space-y-2 font-mono font-bold absolute bg-text w-full left-0"
+              className="px-4 pb-4 flex flex-col md:hidden mt-2 space-y-2 
+              font-mono font-bold absolute bg-text w-full left-0"
             >
               <Link to="/" onClick={() => setOpen(false)}>
                 HOME

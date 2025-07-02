@@ -9,34 +9,34 @@ const About = () => {
           <h1 className="text-2xl font-bold mb-4 text-center">About Us</h1>
           <div className="mb-6 text-center">
             <img
-              src="/about_image.png"
+              src="before-aboutUs.png"
               alt="Our Team Illustration"
               className="mx-auto w-full max-w-md rounded-lg "
             />
           </div>
           <p className="mb-4 text-gray-700">
-            We’re not a big, faceless company. We’re a small, faceless company—
-            but with heart. Our mission is to make same-day installations feel
-            less like a hassle and more like a superpower.
+            QuickMove is a local team based in the Lower Mainland, offering
+            reliable junk removal and moving services — with same-day
+            availability when you need it most.
           </p>
           <p className="mb-4 text-gray-700">
-            With a mix of technical skill, speed, and just enough charm to make
-            your grandma smile, we help homes and offices get set up fast. No
-            long waits. No flaky promises. Just real service, real quick.
+            We handle everything from old furniture and appliance pickups to
+            full residential moves. Our goal is to make the process simple,
+            efficient, and stress-free.
           </p>
           <p className="mb-4 text-gray-700">
-            Whether it's mounting, wiring, troubleshooting, or upgrading, we
-            show up on time and get the job done right—the first time. Because
-            we know you’ve got better things to do than wait around all day.
+            Whether you're clearing out a basement, upgrading your space, or
+            switching apartments, we bring the muscle, the truck, and a
+            no-nonsense work ethic.
           </p>
           <p className="mb-4 text-gray-700">
-            Behind our services is a team of humans (and one suspiciously
-            capable AI) who care about doing things properly. We believe in fast
-            work, clean finishes, and a no-drama approach.
+            We're fully insured, always on time, and serious about doing the job
+            right. No hidden fees. No delays. Just clear, upfront service you
+            can count on.
           </p>
           <p className="mb-4 text-gray-700">
-            Want to learn more or book a service? Just reach out. Or send smoke
-            signals. We’ll probably respond faster than your internet provider.
+            Ready to book or have questions? Reach out — we’re quick to respond
+            and quicker to show up.
           </p>
         </div>
       </Container>

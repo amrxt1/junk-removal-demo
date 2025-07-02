@@ -1,27 +1,46 @@
 import Container from "../components/shared/Container";
 import ContactForm from "../components/shared/ContactForm";
+
 const cards = [
   {
-    title: "Same-Day Installations",
+    title: "Moving Help",
     content:
-      "No more waiting around. We offer lightning-fast installations for your home or office, completed the very day you call. Because time is money, and you’re not made of patience.",
+      "Need a hand moving across town or just up the street? We bring the muscle, the van, and the peace of mind.",
   },
   {
-    title: "Custom Setup & Configuration",
+    title: "Junk Removal",
     content:
-      "Every space is different. We tailor your installation to your specific needs—whether it's mounting, wiring, or just making it look like we were never there.",
+      "From old mattresses to renovation debris, we haul it all — fast, clean, and responsibly. No hidden fees. No heavy lifting for you.",
   },
   {
-    title: "Maintenance & Upgrades",
+    title: "Appliance & Furniture Pickup",
     content:
-      "Need a tune-up? Or maybe you're ready to upgrade your setup? We’ll handle the technical stuff while you pretend it was your idea all along.",
+      "Bought something bulky? We'll pick it up, bring it in, and place it exactly where you want it — without damage, delays, or excuses.",
+  },
+  {
+    title: "Same-Day & Emergency Service",
+    content:
+      "Got a tight schedule? We offer same-day service in most of the Lower Mainland. Call us now, we’ll get it done.",
+  },
+  {
+    title: "Eco-Friendly Disposal",
+    content:
+      "We don't just dump your junk — we recycle, donate, and dispose responsibly whenever possible. Good for you, better for the planet.",
+  },
+  {
+    title: "Flexible Scheduling",
+    content:
+      "Weekends? Evenings? Last minute? We’ll make it work. Just let us know what time suits you best.",
   },
 ];
 
 const Card = ({ title, content }) => {
   return (
-    <div className="border rounded-lg px-4 py-6 mb-8 shadow-md flex flex-col h-full justify-between">
-      <h1 className="text-xl font-semibold mb-2">{title}</h1>
+    <div
+      className="border-2 border-gray-600 rounded-lg px-4 py-6 
+     shadow-md h-full space-y-2"
+    >
+      <h1 className="text-xl font-semibold">{title}</h1>
       <p className="text-gray-700">{content}</p>
     </div>
   );
@@ -34,6 +53,11 @@ const Services = () => {
         <div className="font-space font-bold text-2xl text-center my-4">
           Our Services
         </div>
+        <img
+          src="services-page.png"
+          alt="a moving truck in front of a house"
+          className="rounded-lg mb-8 drop-shadow-md border-gray-500"
+        />
         <div className="grid md:grid-cols-2 gap-6">
           {cards.map((card, index) => {
             return <Card key={index} {...card} />;

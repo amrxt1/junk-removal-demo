@@ -9,7 +9,7 @@ const cards = [
     title: "Junk Removal",
     content:
       "From broken furniture to renovation debris. We haul it fast, clean, and responsibly.",
-    color: "flex flex-col h-full justify-end pl-8 pb-4 w-[50%] drop-shadow-sm",
+    color: "flex flex-col h-full justify-end pl-8 pb-4 w-[60%] drop-shadow-sm",
     imgSrc: "hauling.png",
   },
   {
@@ -67,7 +67,7 @@ function Card({
       <div className="absolute inset-0 bg-black/25 pointer-events-none" />
       <div className={`${color} z-10`}>
         <h1 className="font-bold text-3xl mb-2">{title} </h1>
-        <p className="font-semibold text-xl">{content} </p>
+        <p className="text-lg ">{content} </p>
       </div>
     </motion.div>
   );
