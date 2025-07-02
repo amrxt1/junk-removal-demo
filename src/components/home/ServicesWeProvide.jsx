@@ -106,6 +106,11 @@ function ServicesWeProvide() {
           <Button
             variant="accent"
             className="px-21 font-semibold text-2xl w-[90%] md:w-auto"
+            onClick={() =>
+              document
+                .getElementById("contact")
+                .scrollIntoView({ behavior: "smooth" })
+            }
           >
             Contact Us
           </Button>
