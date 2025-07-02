@@ -1,4 +1,6 @@
 import Container from "../shared/Container";
+import Button from "../shared/Button";
+
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
@@ -99,6 +101,14 @@ function ServicesWeProvide() {
               />
             );
           })}
+        </div>
+        <div className="text-center relative bottom-17">
+          <Button
+            variant="accent"
+            className="px-21 font-semibold text-2xl w-[90%] md:w-auto"
+          >
+            Contact Us
+          </Button>
         </div>
       </div>
     </Container>
