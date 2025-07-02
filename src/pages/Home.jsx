@@ -10,8 +10,8 @@ export default function Home() {
       <Hero />
       <ServicesWeProvide />
       <WhyUs />
-      <FindUs />
       <ContactForm />
+      <FindUs />
     </>
   );
 }
