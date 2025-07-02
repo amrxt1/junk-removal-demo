@@ -12,7 +12,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
         id="hero"
-        className="flex flex-col pt-16 pb-24 text-center gap-8 z-10 md:flex-row"
+        className="flex flex-col pt-16 pb-16 text-center gap-8 z-10 md:flex-row"
       >
         <div className="flex flex-col gap-4 justify-center">
           <h1 className="text-3xl font-space font-bold md:text-left ">
@@ -23,12 +23,12 @@ function Hero() {
           </h1>
           <h2 className=" text-xl md:text-left ">
             <p className="text-gray-500">
-              Need to get rid of junk or move out—without the wait?
+              Need to get rid of junk or move out?
             </p>
             <p className="font-semibold">
               <span className="text-gray-500 font-normal">
                 We offer same-day junk removal and moving help across the Lower
-                Mainland. &nbsp;
+                Mainland. &nbsp; <br />
               </span>
               Just call, book, and relax.
             </p>
