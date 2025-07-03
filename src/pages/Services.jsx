@@ -1,6 +1,8 @@
 import Container from "../components/shared/Container";
 import ContactForm from "../components/shared/ContactForm";
 
+import { motion } from "motion/react";
+
 const cards = [
   {
     title: "Moving Help",
@@ -50,16 +52,26 @@ const Services = () => {
   return (
     <>
       <Container className="pb-12">
-        <div className="font-space font-bold text-2xl text-center my-4">
+        <motion.div
+          initial={{ opacity: 0.3, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="font-space font-bold text-2xl text-center my-4"
+        >
           Our Services
-        </div>
-        <div className="w-full flex justify-center">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0.3, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="w-full flex justify-center"
+        >
           <img
             src="services-page.png"
             alt="a moving truck in front of a house"
             className="rounded-lg mb-8 drop-shadow-md border-gray-500 w-full lg:w-[60%]"
           />
-        </div>
+        </motion.div>
         <div className="grid md:grid-cols-2 gap-6">
           {cards.map((card, index) => {
             return <Card key={index} {...card} />;

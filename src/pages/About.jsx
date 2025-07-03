@@ -1,19 +1,33 @@
 import Container from "../components/shared/Container";
 import ContactForm from "../components/shared/ContactForm";
 
+import { motion } from "motion/react";
+
 const About = () => {
   return (
     <>
       <Container>
         <div className="my-8">
-          <h1 className="text-2xl font-bold mb-4 text-center">About Us</h1>
-          <div className="mb-6 w-full flex justify-center">
+          <motion.h1
+            initial={{ opacity: 0.3, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="text-2xl font-bold mb-4 text-center"
+          >
+            About Us
+          </motion.h1>
+          <motion.div
+            initial={{ opacity: 0.3, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="mb-6 w-full flex justify-center"
+          >
             <img
               src="before-aboutUs.png"
               alt="Our Team Illustration"
               className="rounded-lg lg:w-[60%]"
             />
-          </div>
+          </motion.div>
           <div className="text-lg">
             <p className="mb-4 text-gray-700">
               QuickMove is a local team based in the Lower Mainland, offering
