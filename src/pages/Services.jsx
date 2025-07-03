@@ -53,11 +53,13 @@ const Services = () => {
         <div className="font-space font-bold text-2xl text-center my-4">
           Our Services
         </div>
-        <img
-          src="services-page.png"
-          alt="a moving truck in front of a house"
-          className="rounded-lg mb-8 drop-shadow-md border-gray-500"
-        />
+        <div className="w-full flex justify-center">
+          <img
+            src="services-page.png"
+            alt="a moving truck in front of a house"
+            className="rounded-lg mb-8 drop-shadow-md border-gray-500 w-full lg:w-[60%]"
+          />
+        </div>
         <div className="grid md:grid-cols-2 gap-6">
           {cards.map((card, index) => {
             return <Card key={index} {...card} />;
