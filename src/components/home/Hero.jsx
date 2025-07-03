@@ -14,7 +14,7 @@ function Hero() {
         id="hero"
         className="flex flex-col pt-16 pb-16 text-center gap-8 z-10 md:flex-row"
       >
-        <div className="flex flex-col gap-4 justify-center">
+        <div className="flex flex-col gap-4 justify-center min-w-[200px]">
           <h1 className="text-3xl font-space font-bold md:text-left ">
             <span className="bg-gradient-to-l from-accent to-gray-500 bg-clip-text text-transparent">
               Fast & Reliable
