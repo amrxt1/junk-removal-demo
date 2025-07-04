@@ -49,7 +49,7 @@ function Hero() {
         <div className="rounded-lg overflow-clip aspect-[14/9] shadow-lg ">
           <img
             src="hero-banner.png"
-            alt="cozy-furniture"
+            alt="pickup truck"
             className="w-full h-full object-cover rounded-lg"
           />
         </div>
