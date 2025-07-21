@@ -57,7 +57,7 @@ function Card({
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <motion.div
-      className={`rounded-lg mb-24 aspect-square sticky bg-cover bg-center overflow-clip md:h-[70vh] w-full `}
+      className={`rounded-lg mb-24 aspect-square sticky bg-cover bg-center overflow-clip md:h-[70vh] w-full shadow-2xl`}
       style={{
         scale,
         top: `calc(10vh + ${i * 25}px)`,
